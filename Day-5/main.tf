@@ -99,7 +99,7 @@ resource "aws_instance" "server" {
       "sudo apt-get install -y python3-pip",  # Example package installation
       "cd /home/ubuntu",
       "sudo pip3 install flask",
-      "sudo python3 app.py &",
+      "sudo nohup python3 app.py &",       ///nohup command runs even we exit from terminal and "&" indicates BACKGROUND Process///
     ]
   }
 }
